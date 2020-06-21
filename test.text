@@ -1,0 +1,21 @@
+ <Input label='name' onChangeText={changeName} value={name} />
+
+            <Button title='add' onPress={showName} />
+
+            <FlatList
+                data={names}
+                keyExtractor={(item, index) => item.key}
+                renderItem={itemData => <NameList listName={itemData.item} />}
+            />
+
+
+
+
+
+               {/* ex 1 */}
+            <Modal visible={false}>
+                <Button title="add a name" onPress={mmm} />
+                <NameInput addName={addNameToArry} mode={modalMode} setModalMode={setModalMode} />
+                <NameList list={namesArry} deleteitem={setNamesArry} />
+
+            </Modal>
